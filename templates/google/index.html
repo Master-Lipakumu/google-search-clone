@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+    <div class="title">
+        <h1 style="color:green;text-align:center;margin-top:10vh;font-size:50px;font-weight:bold;">GO<span style="color:yellow;">OG</span><span style="color:blue;">LE</span><h1>
+    </div>
+    <div class="search">
+        <form method="POST" >
+            {% csrf_token %}
+            <div class="form-group row" style="text-align:center;margin:0 auto;margin-left:25%;display:inline-block;width:50%;">
+                <div class="col-sm-15 col-6 col-xl-12 col-lg-12">
+                    <input type="search" class="form-control form-control-lg" id="colFormLabelLg" placeholder="search">
+                </div>
+            </div><br>
+            <div class="form-group row btn" style="margin:0 auto;margin-left:35%;">
+                <button class="btn btn-light" type="submit">Recherche Google</button>
+                <button class="btn btn-light">j'ai de la chance</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
